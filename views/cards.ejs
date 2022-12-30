@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+
+<body style="background-color:black;">
+
+  <h1 style="text-align:center;font-family: 'Montserrat', sans-serif; size: 3rem; line-height: 1.5;color:white;"><%=product%></h1>
+  <div class="row feature-box" style="padding: 2% 10% 0% 10%;">
+    <div class="col-lg-6">
+      <img src="<%=img%> "  style="height: 80%;width:95%;" alt="">
+    </div>
+    <div class="col-lg-4">
+      <h3 style="font-family: 'Montserrat', sans-serif;color:white;">Insight</h3>
+      <% features.forEach(function(feature){ %>
+        <h2 style="color:white;font-family: 'Exo 2', sans-serif;"> <%=feature%> </h2>
+      <% }); %>
+    </div>
+    <div class="col-lg-2">
+      <h2 style="color:white;">Price: ₹<%=price%></h2><br><br><br>
+      <a type="button" href="/<%=id1%>/order" class="btn btn-outline-light btn-lg">Order Now</a>
+    </div>
+  </div>
+</body>
+<%- include('partials/footer') %>
